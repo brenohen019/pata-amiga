@@ -1,0 +1,154 @@
+/* ===================================================================
+   PATA AMIGA — Estilos personalizados (seu CSS)
+   Este arquivo complementa o Bootstrap com a "cara" do nosso petshop.
+   Dica: pra trocar as cores do site inteiro, mude só as variáveis abaixo.
+   =================================================================== */
+
+/* 1) VARIÁVEIS DE COR -------------------------------------------------
+   Mude aqui e o site todo muda de cor. */
+:root {
+  --cor-primaria: #2A9D8F;   /* verde-água principal (menu, destaques) */
+  --cor-escura:   #264653;   /* azul petróleo (textos e rodapé) */
+  --cor-accent:   #F4A261;   /* laranja (botões de ação) */
+  --cor-clara:    #FAF6F0;   /* bege suave (fundo das páginas) */
+}
+
+/* 2) BASE ------------------------------------------------------------ */
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--cor-escura);
+  background-color: var(--cor-clara);
+  padding-top: 56px; /* altura do menu fixo (56px), pra ele não cobrir o conteúdo */
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* 3) MENU (navbar) --------------------------------------------------- */
+.navbar-pata {
+  background-color: var(--cor-primaria);
+}
+.navbar-pata .nav-link {
+  color: rgba(255, 255, 255, .85);
+  font-weight: 600;
+  margin: 0 4px;
+}
+.navbar-pata .nav-link:hover,
+.navbar-pata .nav-link.active {
+  color: #fff;
+}
+
+/* 4) BOTÕES DE DESTAQUE --------------------------------------------- */
+.btn-pata {
+  background-color: var(--cor-accent);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 30px;
+}
+.btn-pata:hover {
+  background-color: #e38b4e;
+  color: #fff;
+}
+
+/* 5) SEÇÕES ---------------------------------------------------------- */
+.secao {
+  padding: 64px 0;
+}
+.secao-branca {
+  background-color: #fff;
+}
+
+/* Título de seção com um risquinho laranja embaixo */
+.titulo-secao {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.titulo-secao::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--cor-accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* 6) CARDS ----------------------------------------------------------- */
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, .12);
+}
+/* Fotos dos cards: todas no mesmo formato (3:2), mesmo que as fotos
+   originais tenham proporções diferentes. O excesso é cortado, sem distorcer. */
+.card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+/* Foto com fundo branco em cima de um fundo colorido: o "multiply" faz o
+   branco da foto assumir a cor da página, e a foto parece recortada. */
+.foto-sem-fundo {
+  mix-blend-mode: multiply;
+}
+.icone-servico {
+  font-size: 2.6rem;
+  color: var(--cor-primaria);
+}
+
+/* 7) HERO / CARROSSEL ------------------------------------------------ */
+.carousel-item img {
+  width: 100%;              /* ocupa a largura toda da tela, em qualquer aparelho */
+  height: 480px;
+  object-fit: cover;        /* a imagem preenche o espaço sem distorcer */
+  filter: brightness(.65);  /* escurece a foto pra ler o texto por cima */
+}
+/* Em telas estreitas a foto é mais larga que o banner e o navegador corta
+   as laterais. Esta classe manda manter visível o lado esquerdo da foto,
+   que é onde está o filhote. */
+.carousel-item img.foco-esquerda {
+  object-position: left center;
+}
+.carousel-caption {
+  bottom: 30%;
+}
+.carousel-caption p {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .6); /* sombra pra ler o texto sobre a foto */
+}
+.carousel-caption h2 {
+  font-size: 2.6rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+/* 8) RODAPÉ ---------------------------------------------------------- */
+.rodape {
+  background-color: var(--cor-escura);
+  color: #cfd8dc;
+}
+.rodape a {
+  color: #cfd8dc;
+  text-decoration: none;
+}
+.rodape a:hover {
+  color: #fff;
+}
+
+/* 9) RESPONSIVIDADE EXTRA (celular) ---------------------------------
+   O Bootstrap já cuida de quase tudo. Aqui só ajustamos detalhes
+   pra telas bem pequenas (até 576px de largura). */
+@media (max-width: 576px) {
+  .carousel-item img { height: 340px; }
+  .carousel-caption h2 { font-size: 1.5rem; }
+  .carousel-caption { bottom: 15%; }
+  .secao { padding: 40px 0; }
+}

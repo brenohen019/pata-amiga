@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços — Pata Amiga</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- MENU (igual ao da index, mas aqui "Serviços" está active) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm navbar-pata">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🐾 Pata Amiga</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header class="secao secao-branca text-center">
+    <div class="container">
+      <h1 class="titulo-secao">Nossos Serviços</h1>
+      <p class="lead col-lg-8 mx-auto">Na Pata Amiga, o seu pet encontra tudo em um só lugar: da consulta veterinária ao banho relaxante. Conheça abaixo tudo o que preparamos com carinho para o bem-estar do seu melhor amigo.</p>
+    </div>
+  </header>
+
+  <!-- LISTA DE SERVIÇOS (cards) -->
+  <section class="secao">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 text-center p-4">
+            <i class="bi bi-droplet-half icone-servico mb-3"></i>
+            <h5>Banho</h5>
+            <p class="mb-0">Banho completo com produtos específicos para cada tipo de pelagem, secagem cuidadosa e perfume suave. Seu pet sai limpinho e cheiroso.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 text-center p-4">
+            <i class="bi bi-scissors icone-servico mb-3"></i>
+            <h5>Tosa</h5>
+            <p class="mb-0">Tosa higiênica ou na tesoura, feita por profissionais experientes que respeitam o ritmo e o conforto do seu animal do começo ao fim.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 text-center p-4">
+            <i class="bi bi-heart-pulse icone-servico mb-3"></i>
+            <h5>Consulta veterinária</h5>
+            <p class="mb-0">Avaliação completa da saúde do seu pet com veterinários atenciosos, exames e orientações para uma vida longa e saudável.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 text-center p-4">
+            <i class="bi bi-shield-plus icone-servico mb-3"></i>
+            <h5>Vacinação</h5>
+            <p class="mb-0">Calendário de vacinas em dia é saúde garantida. Aplicamos as principais vacinas com segurança e carteirinha atualizada.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 text-center p-4">
+            <i class="bi bi-house-heart icone-servico mb-3"></i>
+            <h5>Hotelzinho</h5>
+            <p class="mb-0">Vai viajar? Seu pet fica em um espaço seguro, limpo e divertido, com monitoramento e muito carinho enquanto você estiver fora.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 text-center p-4">
+            <i class="bi bi-award icone-servico mb-3"></i>
+            <h5>Adestramento</h5>
+            <p class="mb-0">Ensino com reforço positivo para melhorar o comportamento e fortalecer o vínculo entre você e o seu companheiro de quatro patas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERGUNTAS FREQUENTES (componente ACCORDION do Bootstrap) -->
+  <section class="secao secao-branca">
+    <div class="container">
+      <h2 class="titulo-secao">Perguntas frequentes</h2>
+      <!-- Duas colunas em telas grandes (foto + perguntas);
+           no celular e no tablet, uma fica embaixo da outra. -->
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-5">
+          <img src="img/servicos-banho.jpg" alt="Cachorro golden retriever relaxado durante o banho, com espuma na cabeça" class="img-fluid rounded-4 shadow-sm">
+        </div>
+        <div class="col-lg-7">
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Preciso agendar horário para o banho e tosa?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                <div class="accordion-body">Sim! Trabalhamos com hora marcada para que o seu pet seja atendido com calma e sem esperas. Você pode agendar pela página de contato ou por telefone.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Vocês atendem gatos também?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">Com certeza! Nossa equipe é preparada para cuidar de cães, gatos e outros pequenos animais com todo o cuidado que cada espécie precisa.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Qual o horário de funcionamento?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">Atendemos de segunda a sexta, das 8h às 18h, e aos sábados, das 8h às 14h. Aos domingos e feriados permanecemos fechados, exceto para hóspedes do hotelzinho.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-white">🐾 Pata Amiga</h5>
+          <p class="small">Petshop e clínica veterinária que trata o seu pet como parte da família desde 2015.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white">Links rápidos</h6>
+          <ul class="list-unstyled small">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-white">Contato</h6>
+          <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>Rua dos Bichos, 123 — Centro</p>
+          <p class="small mb-1"><i class="bi bi-telephone me-2"></i>(11) 4000-0000</p>
+          <p class="small"><i class="bi bi-envelope me-2"></i>contato@pataamiga.com.br</p>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="text-center small mb-1">© 2026 Pata Amiga — Trabalho acadêmico. Todos os direitos reservados.</p>
+      <p class="text-center small mb-0">As imagens pertencem aos seus respectivos autores e marcas e são usadas apenas para fins acadêmicos.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
